@@ -23,7 +23,6 @@ class Sales_data {
 		std::string isbn() const { return bookNo; }
 		Sales_data &combine(const Sales_data &other);
 
-	private:
 		double avg_price() const;
 
 		// member data

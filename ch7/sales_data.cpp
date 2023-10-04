@@ -1,9 +1,5 @@
 #include "Sales_data.h"
 
-//Sales_data::Sales_data(std::istream &is) {
-//	read(is, *this);
-//}
-
 Sales_data &Sales_data::combine(const Sales_data &other) {
 	units_sold += other.units_sold;
 	revenue += other.revenue;
@@ -34,9 +30,7 @@ std::ostream &print(std::ostream &os, const Sales_data &item) {
 }
 
 Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
-	Sales_data temp = lhs;
-	temp.units_sold += rhs.units_sold;
-	temp.revenue += rhs.revenue;
-
-	return temp;
+	Sales_data sum = lhs;
+	sum.combine(rhs);
+	return sum;
 }
