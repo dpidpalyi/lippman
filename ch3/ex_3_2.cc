@@ -6,8 +6,8 @@ using std::endl;
 using std::string;
 
 int main() {
-	string s;
-	getline(cin, s);
-	cout << s << endl;
-	return 0;
+  string s;
+  getline(cin, s);
+  cout << s << endl;
+  return 0;
 }

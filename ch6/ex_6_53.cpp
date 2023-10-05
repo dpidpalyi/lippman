@@ -5,4 +5,4 @@ int calc(char *, char *);
 int calc(const char *, const char *);
 
 int calc(char *, char *);
-int calc(char *const, char *const); // ambiguous cause top-level 
+int calc(char *const, char *const);  // ambiguous cause top-level

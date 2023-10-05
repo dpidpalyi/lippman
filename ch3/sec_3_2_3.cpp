@@ -1,17 +1,16 @@
+#include <cctype>
 #include <iostream>
 #include <string>
-#include <cctype>
 
-using std::string;
-using std::cout;
-using std::cin;
 using std::cerr;
+using std::cin;
+using std::cout;
 using std::endl;
+using std::string;
 
 int main() {
-	string s("hello world!!!");
-	for (auto &c : s)
-		c = toupper(c);
-	cout << s << endl;
-	return 0;
+  string s("hello world!!!");
+  for (auto &c : s) c = toupper(c);
+  cout << s << endl;
+  return 0;
 }

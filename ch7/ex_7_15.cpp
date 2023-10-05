@@ -6,14 +6,14 @@ using std::endl;
 using std::string;
 
 int main() {
-	Person Ivan(cin);
-	print(cout, Ivan) << endl;
+  Person Ivan(cin);
+  print(cout, Ivan) << endl;
 
-	Person Ruslan("Ruslan");
-	print(cout, Ruslan) << endl;
+  Person Ruslan("Ruslan");
+  print(cout, Ruslan) << endl;
 
-	Person Igor("Igor", "Yugorsk");
-	print(cout, Igor) << endl;
+  Person Igor("Igor", "Yugorsk");
+  print(cout, Igor) << endl;
 
-	return 0;
+  return 0;
 }

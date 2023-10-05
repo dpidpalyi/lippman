@@ -11,22 +11,22 @@ std::ostream &print(std::ostream &os, const Sales_data &item);
 Sales_data add(const Sales_data &lhs, const Sales_data &rhs);
 
 struct Sales_data {
-	//Sales_data() = default;
-	Sales_data() : bookNo(), units_sold(0), revenue(0.0) {}
-	Sales_data(const std::string &s) : bookNo(s) {}
-	Sales_data(const std::string &s, unsigned n, double p) :
-		bookNo(s), units_sold(n), revenue(n * p) {}
-	Sales_data(std::istream &is) { read(is, *this); }
+  // Sales_data() = default;
+  Sales_data() : bookNo(), units_sold(0), revenue(0.0) {}
+  Sales_data(const std::string &s) : bookNo(s) {}
+  Sales_data(const std::string &s, unsigned n, double p)
+      : bookNo(s), units_sold(n), revenue(n * p) {}
+  Sales_data(std::istream &is) { read(is, *this); }
 
-	// member functions
-	std::string isbn() const { return bookNo; }
-	Sales_data &combine(const Sales_data &other);
-	double avg_price() const;
+  // member functions
+  std::string isbn() const { return bookNo; }
+  Sales_data &combine(const Sales_data &other);
+  double avg_price() const;
 
-	// member data
-	std::string bookNo;
-	unsigned units_sold = 0;
-	double revenue = 0.0;
+  // member data
+  std::string bookNo;
+  unsigned units_sold = 0;
+  double revenue = 0.0;
 };
 
 #endif

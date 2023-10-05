@@ -6,6 +6,6 @@ using std::endl;
 using std::string;
 
 int main() {
-	string s;
-	cout << s[0] << endl;
+  string s;
+  cout << s[0] << endl;
 }

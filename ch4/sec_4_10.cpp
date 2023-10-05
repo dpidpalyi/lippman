@@ -6,18 +6,16 @@ using std::endl;
 using std::vector;
 
 int main() {
-	vector<int> ivec(10);
-	vector<int>::size_type cnt = ivec.size();
-	for (auto &i : ivec)
-		cout << i << " ";
-	cout << endl;
+  vector<int> ivec(10);
+  vector<int>::size_type cnt = ivec.size();
+  for (auto &i : ivec) cout << i << " ";
+  cout << endl;
 
-	//for (vector<int>::size_type ix = 0; ix != ivec.size(); ++ix, --cnt)
-	for (vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--)
-		ivec[ix] = cnt;
+  // for (vector<int>::size_type ix = 0; ix != ivec.size(); ++ix, --cnt)
+  for (vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--)
+    ivec[ix] = cnt;
 
-	for (auto &i : ivec)
-		cout << i << " ";
-	cout << endl;
-	return 0;
+  for (auto &i : ivec) cout << i << " ";
+  cout << endl;
+  return 0;
 }

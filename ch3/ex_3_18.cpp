@@ -7,7 +7,7 @@ using std::endl;
 using std::vector;
 
 int main() {
-	vector<int> ivec{42};
-	cout << ivec[0] << endl;
-	return 0;
+  vector<int> ivec{42};
+  cout << ivec[0] << endl;
+  return 0;
 }

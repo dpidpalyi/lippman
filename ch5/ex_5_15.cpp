@@ -1,8 +1,7 @@
 for (int ix = 0; ix != sz; ++ix)
-if (ix != sz) // unnecessary
+  if (ix != sz)  // unnecessary
 
+    int ix;  // uninitialized
+for (; ix != sz; ++ix)
 
-int ix; //uninitialized
-for (;ix != sz; ++ix)
-
-for (int ix = 0; ix != sz; ++ix, ++sz) // loops forever
+  for (int ix = 0; ix != sz; ++ix, ++sz)  // loops forever

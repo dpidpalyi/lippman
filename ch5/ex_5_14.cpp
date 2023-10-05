@@ -29,9 +29,9 @@ int main() {
     }
 
     if (max > 1)
-	    cout << max_str << " occured " << max << " times." << endl;
-    else 
-	    cout << "No words repeated." << endl;
+      cout << max_str << " occured " << max << " times." << endl;
+    else
+      cout << "No words repeated." << endl;
   } else
     cout << "Bad input!" << endl;
   return 0;
