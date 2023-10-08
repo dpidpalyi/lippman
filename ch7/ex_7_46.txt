@@ -1,0 +1,4 @@
+a) False. Compiler provide sinitized default constructor.
+b) False. We can use default arguments.
+c) False. The class should privede default constructor.
+4) True.
