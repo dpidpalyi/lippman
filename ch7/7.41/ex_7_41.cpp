@@ -1,7 +1,7 @@
 #include "Sales_data.h"
 
 int main() {
-  Sales_data def;
+  Sales_data def{"111", 10, 100};
   std::cout << def.isbn() << std::endl;
   Sales_data str("ISBN");
   std::cout << str.isbn() << std::endl;
