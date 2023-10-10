@@ -1,4 +1,6 @@
 #include <iostream>
+#include <sstream>
+#include <string>
 
 std::istream &foo(std::istream &is) {
   char c;
@@ -9,7 +11,8 @@ std::istream &foo(std::istream &is) {
 }
 
 int main() {
-  std::istream &is = foo(std::cin);
+  std::istringstream ifs("Hello world!");
+  std::istream &is = foo(ifs);
   std::cout << std::endl << is.rdstate() << std::endl;
 
   return 0;
