@@ -1,0 +1,4 @@
+vector<int> v1; // vector<int> container
+cosnt vector<int> v2; // const vector<int> container
+auto it1 = v1.begin(), it2 = v2.begin(); // it1 vector<int>::iterator, it2 vector<int>::const_iterator
+auto it3 = v1.cbegin(), it4 = v2.cbegin(); // it3 vector<int>::const_iterator, same it4

@@ -1,0 +1,2 @@
+1) begin and end must refer to the same container;
+1) end must be before begin;

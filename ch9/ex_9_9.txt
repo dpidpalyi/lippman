@@ -1,0 +1,2 @@
+begin returns const_iterator only if container is const
+cbegin allways returns const_iterator

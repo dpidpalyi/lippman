@@ -1,0 +1,3 @@
+a) vector(Process input then sort it)
+b) deque
+c) vector
