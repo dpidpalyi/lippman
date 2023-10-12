@@ -1,0 +1,1 @@
+1) If the container holds elements of a class type, it must have a default constructor.

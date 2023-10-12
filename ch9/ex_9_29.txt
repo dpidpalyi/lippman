@@ -1,0 +1,2 @@
+1) vec holds 25 elements. After vec.resize(100) it will holds 25 elements + 75 elements with value initialized to the back of vector.
+2) After vec.resize(10), delete 90 elementds from the back.

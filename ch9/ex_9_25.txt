@@ -1,0 +1,2 @@
+1) No changes are made
+2) If elem2 is off-the-end iterator, then it will erase from elem1 to the end of container. If elem1 and elem2 are the off-the-end iterator, nothing will be erased.
