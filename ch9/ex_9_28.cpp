@@ -10,9 +10,9 @@ using std::forward_list;
 void foo(forward_list<string> &lst, const string &s1, const string &s2) {
 	auto curr = lst.cbegin();
 	auto prev = lst.cbefore_begin();
-	auto e = lst.cend();
+	//auto e = lst.cend(); DISASTER as follows 
 	
-	while (curr != e) {
+	while (curr != lst.cend()) {
 		if (*curr == s1) {
 			lst.insert_after(curr, s2);
 			return;
