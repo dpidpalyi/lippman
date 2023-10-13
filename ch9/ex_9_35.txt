@@ -1,0 +1,2 @@
+capacity tells us the maximum size of how many elements can hold our container
+size tells us current count of elements in our container
