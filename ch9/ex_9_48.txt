@@ -1,0 +1,2 @@
+string numbers("0123456789"), name("r2d2");
+numbers.find(name) returns string::npos
