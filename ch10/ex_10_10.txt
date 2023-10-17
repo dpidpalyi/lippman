@@ -1,0 +1,2 @@
+Because algorithms works with iterators, not containers.
+The implementation of the containers are abstracted away by the interface (iterators). The algorithms can only access the interface, they have no way to directly access the implementation.

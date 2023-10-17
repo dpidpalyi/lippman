@@ -1,0 +1,1 @@
+Because algorithm works with iterators. In this situation, back_inserter changes the size of container, not algorithm.
