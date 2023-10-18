@@ -1,0 +1,1 @@
+three arguments (callable, const string &s, size sz)
