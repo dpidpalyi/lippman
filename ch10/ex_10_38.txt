@@ -1,0 +1,17 @@
+1) Input iterators: read only, no write; increment(++); equal and not equal(==, !=); single-pass, dereference as right-hand (i = *in), arrow operator(->) to access members.
+2) Output iterators: write only, no read; increment(++); single-pass; dereference as left-hand (*out = i).
+3) Forward iterators: read and write; increment(++); multi-pass; equal and not equal; dereference(*); arrow operator;
+4) Bedirectional iterators: read and write; increment(++) and decrement(++); multi-pass; equal and not equal; dereference(*); arrow operator;
+5) Random-access iterators: read and write; increment(++) and decrement(++); all arithmetic iterator operations (+, -, <=, >, etc.); multi-pass; equal and not equal; dereference(*); arrow operator; subscript operator (it[n]).
+
+
+Input iterators : ==, !=, ++, *, ->
+
+Output iterators : ++, *
+
+Forward iterators : ==, !=, ++, *, ->
+
+Bidirectional iterators : ==, !=, ++, --, *, ->
+
+Random-access iterators : ==, !=, <, <=, >, >=, ++, --, +, +=, -, -=, -(two iterators), *, ->, iter[n] == * (iter + n)
+

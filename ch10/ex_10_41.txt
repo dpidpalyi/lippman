@@ -1,0 +1,4 @@
+1) replace(beg, end, old_val, new_val) // replace elements that equal old_val with new_val from in range [beg, end);
+2) replace_if(beg, end, pred, new_val) // replace elements with predicate and new_val;
+3) replace_copy(beg, end, dest, old_val, new_val) // replace elements that equal old_val with new_val to dest, others same;
+4) replace_copy_if(beg, end, dest, pred, new_val) // same but with predicate

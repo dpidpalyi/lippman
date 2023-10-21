@@ -1,0 +1,3 @@
+1) copy requires at least input iterators for first two parameters and output iterator for third parameter;
+2) reverse requires bidirectional iterators;
+3) unique requires forward iterators.
