@@ -1,0 +1,5 @@
+list - Deikstra algorithm for calculator
+vector - storing elements from cin
+deque - shedulers (first in, last out)
+map - contact lists
+set - blacklists

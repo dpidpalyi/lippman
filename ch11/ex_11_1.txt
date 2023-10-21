@@ -1,0 +1,1 @@
+map uses key/value pair for elements, so indexes in this container maybe different type then in vector (size_t). If no index presents in map, rather then throw exception(vector), map stores this element with zero initialized value.
