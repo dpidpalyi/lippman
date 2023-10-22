@@ -1,0 +1,1 @@
+Map uses key/value elements, where set only keys. If we need to store only items without counting them, we can use set. If we need to count them, or have any other numeric characteristics we can use map.
