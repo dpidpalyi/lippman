@@ -1,0 +1,2 @@
+1) map<vector<int>::iterator, int> - we could define, because vector iterator is random-access iterator and have '<' operator;
+2) map<list<int>::iterator, int> - we couldn't define, because list iterator is bidirectianl iterator and does not have '<' operator;
