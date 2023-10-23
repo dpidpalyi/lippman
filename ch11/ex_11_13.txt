@@ -1,0 +1,4 @@
+vec.push_back(make_pair(first, second));
+vec.push_back(pair<string, int>(first, second));
+vec.push_back({first, second}); // the easiest way, because need to remember only one method push_back and one uniform of list initialization.
+vec.emplace_back(first, second);
