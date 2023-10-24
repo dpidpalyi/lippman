@@ -1,0 +1,7 @@
+multiset<string> c;
+vector<string> v;
+
+copy(v.begin(), v.end(), inserter(c, c.end())); // legal
+copy(v.begin(), v.end(), back_inserter(c));     // illegal, no supporting push_back
+copy(c.begin(), c.end(), inserter(v, v.end())); // legal
+copy(c.begin(), c.end(), back_inserter(v));     // legal
