@@ -1,0 +1,7 @@
+map<string, size_t> word_count;
+string word;
+
+while (cin >> word)
+  ++word_count.insert({word, 0}).first->second;
+  // If word is in map, we will increment through iterator the value;
+  // If word isn't in map, we will set it to 0, and then increment it to 1.
