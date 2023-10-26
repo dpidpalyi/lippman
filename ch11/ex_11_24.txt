@@ -1,0 +1,2 @@
+map<int, int> m; // initialize empty map of int keys and int values;
+m[0] = 1; 	 // new key_value pair is inserted: key 0, value is value initalized to 0, then we fetched this new element, and assign to value 1.

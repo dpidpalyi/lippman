@@ -1,0 +1,2 @@
+vector<int> v;	// initialize an empty int vector;
+v[0] = 1;	// error, cause vector is empty, and there is no index with 0
