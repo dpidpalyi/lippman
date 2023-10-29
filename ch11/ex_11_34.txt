@@ -1,0 +1,1 @@
+if there no transformation we will add it to map, and output "" value initialized empty string for those words that didn't find

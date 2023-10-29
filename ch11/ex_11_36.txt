@@ -1,0 +1,1 @@
+it will throw an exception and the program would fail.
