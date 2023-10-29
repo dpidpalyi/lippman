@@ -1,0 +1,6 @@
+Advantages:
+- when we haven't comparisson between elements we can use unordered;
+- can be very fast if done properly.
+Advantages of ordered:
+- simpler;
+- allready ordered.
