@@ -1,0 +1,2 @@
+count, when we have multiple keys in container
+find to find first occurence or to check if key is exist

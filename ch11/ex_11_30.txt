@@ -1,0 +1,4 @@
+for (auto pos = authors.equal_range(search_item); pos.first != pos.second; ++pos.first)
+  cout << pos.first->second << endl;
+// Because equal_range returns a pair of iterators to a pair(value_type), with pos.first we get a current iterator between finded elements; pos.first->second returns a member of iterator
+// author name (key_type), book name (mapped_type)
