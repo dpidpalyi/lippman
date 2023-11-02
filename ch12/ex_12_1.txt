@@ -1,0 +1,7 @@
+StrBlob b1; // share_ptr b1 = 1
+{
+	StrBlob b2 = {"a", "an", "the"}; // share_ptr b2 = 1
+	b1 = b2; // old share_ptr b1 = 0, share_ptr b1 and b2 = 2;
+	b2.push_back("about");
+}
+// b1 have four elements; b2 is destroyed

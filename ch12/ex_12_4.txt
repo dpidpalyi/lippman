@@ -1,0 +1,2 @@
+Because size_type is unsigned, so when we pass argument less than 0, we will convert to unsigned, and it will more then zero.
+
