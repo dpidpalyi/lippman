@@ -1,0 +1,6 @@
+auto p = new int();
+auto sp = make_shared<int>();
+(a) process(sp); legal, in process shared counter increase to 2, then decrease to 1;
+(b) process(new int()); legal
+(c) process(p); illegal, need explicit constructor
+(d) process(shared_ptr<int>(p)); illegal, dangling pointer

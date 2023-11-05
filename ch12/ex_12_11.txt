@@ -1,0 +1,2 @@
+process(shared_ptr<int>(p.get()));
+// we will have dangling pointer, cause we will free at the end of the process memory allocated on the address of 'p'.

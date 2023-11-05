@@ -1,0 +1,4 @@
+auto sp = make_shared<int>();
+auto p = sp.get();
+delete p;
+// at the end it will double free error!
