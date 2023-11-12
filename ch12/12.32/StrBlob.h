@@ -33,8 +33,8 @@ public:
   StrBlobPtr begin();
   StrBlobPtr end();
 
-  ConstStrBlobPtr cbegin();
-  ConstStrBlobPtr cend();
+  ConstStrBlobPtr cbegin() const;
+  ConstStrBlobPtr cend() const;
 
 private:
   std::shared_ptr<std::vector<std::string>> data;

@@ -44,10 +44,10 @@ StrBlobPtr StrBlob::end() {
   return StrBlobPtr(*this, data->size());
 }
 
-ConstStrBlobPtr StrBlob::cbegin() {
+ConstStrBlobPtr StrBlob::cbegin() const {
   return ConstStrBlobPtr(*this);
 }
 
-ConstStrBlobPtr StrBlob::cend() {
+ConstStrBlobPtr StrBlob::cend() const {
   return ConstStrBlobPtr(*this, data->size());
 }

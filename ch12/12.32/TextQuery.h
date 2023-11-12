@@ -11,7 +11,7 @@
 #include <set>
 
 #include "StrBlob.h"
-#include "StrBlobPtr.h"
+#include "ConstStrBlobPtr.h"
 
 using line_no = StrBlob::size_type;
 
@@ -73,7 +73,7 @@ std::ostream &print(std::ostream &os, const QueryResult &qr) {
 	os << qr.sought << " occurs " << qr.lines->size() << " "
 		 << make_plural(qr.lines->size(), "time", "s") << std::endl;
 	for (auto num : *qr.lines) {
-		auto pos = qr.file.begin();
+		auto pos = qr.file.cbegin();
 		for (decltype(num) i = 0; i != num; ++i)
 			pos.inc();
 		os << "\t(line " << num + 1 << ") "
