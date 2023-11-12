@@ -1,0 +1,3 @@
+We could use vector, but to eliminate doubles at each step we need to search if we allready have lines in vector. 
+
+I think set is better and easier to use then vector.
