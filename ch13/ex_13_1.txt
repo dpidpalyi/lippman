@@ -1,0 +1,6 @@
+Copy constructor is a constructor with first parameter as a reference to the class type and any additional parameters have default values.
+Copy constructor used:
+- when we define one object to another (copy initialization);
+- when we pass argument to function(except reference);
+- when we return result from function(except reference);
+- brace initiazize the elements in an array or the members of an aggregate class.

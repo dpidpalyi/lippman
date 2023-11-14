@@ -1,0 +1,1 @@
+Sales_data::Sales_data(Sales_data rhs); //Because it will be infinity copy, copy and etc.
