@@ -1,0 +1,2 @@
+When we copy StrBlob we will use synethized copy initialization and copy member of StrBlob shared_ptr.
+Also with StrBlobPtr, curr will copy, shared_ptr too and weak_ptr copy too.
