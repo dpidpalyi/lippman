@@ -1,0 +1,2 @@
+If no destructor - we will have leaked memory;
+If no copy constructor - on destroy object we will have double free memory;
