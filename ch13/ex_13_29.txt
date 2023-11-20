@@ -1,0 +1,1 @@
+Because inside swap operator we swaped only pointers to data, not objects themselves.
