@@ -1,0 +1,7 @@
+StrBlob destructor:
+shared_ptr is destroyed, decrements the reference count.
+
+StrBlobPtr destructor:
+shared_ptr decrements count size;
+destroys built-in curr;
+destroys weak_ptr;
