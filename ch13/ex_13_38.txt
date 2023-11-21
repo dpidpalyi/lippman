@@ -1,0 +1,10 @@
+If we use copy and swap to define the Message copy-assignment operator, we will
+
+    add the copyed message to folders containing the original message,
+    remove both the copyed message and the lhs message from their folders,
+    swap the value of the lhs and the copyed message,
+    add the swapped lhs and the copy-swapped message to their folders,
+    remove the copy-swapped message from its folders.
+
+This means we call copy-constructor one time, swap one time and destructor one time, and it is much more work than the current version.
+

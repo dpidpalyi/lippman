@@ -1,0 +1,4 @@
+Then the sets used to keep track of the Messages in Folders and the sets used to keep track of the Folders in Messages can not be updated. When we copy-construct a new Message, it will not be added to Folders containing the original Message. When we delete a Message, it will not be removed from Folders containing the original Message. When we copy-assign a message both the Folders containing the original Message and the new Message will not be updated properly.
+
+In this Folder-Message system, both Folder and Message are resources, and should be managed properly by the class using them. So the copy-control members need to be defined by the class, rather then sythesized by the compiler.
+
