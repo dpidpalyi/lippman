@@ -1,0 +1,1 @@
+Because we can avoid unnecessary copying of data. No const, cause inside functions we change Folders. We need to change folders, thats why we choose reference &.
