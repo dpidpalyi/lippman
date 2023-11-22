@@ -22,6 +22,7 @@ class Message {
 	// add/remove this Message from the specified Folder's set of messages
 	void save(Folder&);
 	void remove(Folder&);
+	void print();
 	private:
 	std::string contents;	   // actual message text
 	std::set<Folder*> folders; // Folders that have this Message
@@ -33,6 +34,7 @@ class Message {
 
 	void addFldr(Folder *f) { folders.insert(f); }
 	void remFldr(Folder *f) { folders.erase(f); }
+
 };
 
 void swap(Message &, Message&);
@@ -47,6 +49,7 @@ class Folder {
 	Folder(const Folder&);
 	Folder& operator=(const Folder&);
 	~Folder();
+	void print();
 	private:
 	std::string name;
 	std::set<Message*> messages;
@@ -83,6 +86,13 @@ Folder& Folder::operator=(const Folder &rhs) {
 	messages = rhs.messages;	 // copy Message pointers from rhs
 	add_to_Messages(rhs);	 // add this Folder to those Messages
 	return *this;
+}
+
+void Folder::print() {
+	std::cout << "Folder: " << name << std::endl;
+	for (const auto &m : messages)
+		std::cout << m->contents << " ";
+	std::cout << std::endl;
 }
 
 void Message::save(Folder &f) {
@@ -150,10 +160,17 @@ void swap(Folder &lhs, Folder &rhs) {
 	rhs.add_to_Messages(rhs);
 }
 
+void Message::print() {
+	std::cout << "Message: " << contents << std::endl;
+	for (const auto &f : folders)
+		std::cout << f->name << " ";
+	std::cout << std::endl;
+}
+
 #endif
 
 int main() {
-  Folder f1, f2;
+  Folder f1("/home"), f2("/bin");
   Message m1("m1"), m2("m2"), m3("m3"), m4("m4"), m5("m5");
 
   m1.save(f1); m2.save(f1); m5.save(f1);
@@ -194,12 +211,6 @@ int main() {
   f1.print(); f2.print(); std::cout << std::endl;
   m1.print(); m2.print(); m3.print(); m4.print(); m5.print();
 
-  f1.save(m1); f1.save(m2); f1.save(m5);
-  f2.save(m3); f2.save(m4); f2.save(m5);
-  std::cout << "\n===== Folder save =====\n";
-  f1.print(); f2.print(); std::cout << std::endl;
-  m1.print(); m2.print(); m3.print(); m4.print(); m5.print();
-
   {
     Folder f3(f1);
     std::cout << "\n===== Folder copy-constructor =====\n";
@@ -223,12 +234,6 @@ int main() {
 
   swap(f1, f1);
   std::cout << "\n===== Folder swap self =====\n";
-  f1.print(); f2.print(); std::cout << std::endl;
-  m1.print(); m2.print(); m3.print(); m4.print(); m5.print();
-
-  f1.remove(m1); f1.remove(m2); f1.remove(m5);
-  f2.remove(m3); f2.remove(m4); f2.remove(m5);
-  std::cout << "\n===== Folder remove =====\n";
   f1.print(); f2.print(); std::cout << std::endl;
   m1.print(); m2.print(); m3.print(); m4.print(); m5.print();
 
