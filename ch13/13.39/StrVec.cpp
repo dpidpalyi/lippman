@@ -1,36 +1,12 @@
-#ifndef STRVEC
-#define STRVEC
+#include "StrVec.h"
 
-#include <string>
-
-class StrVec {
-	public:
-		StrVec(): // the allocator member is default initialized
-			elements(nullptr), first_free(nullptr), cap(nullptr) {}
-		StrVec(const StrVec&); // copy constructor
-		StrVec &operator=(const StrVec&); // copy assignment
-		~StrVec(); // destructor
-		void push_back(const std::string&); // copy the element
-		size_t size() const { return first_free - elements; }
-		size_t capacity() const { return cap - elements; }
-		std::string *begin() const { return elements; }
-		std::string *end() const { return first_free; }
-	private:
-		static std::allocator<std::string> alloc; // allocates the elements
-		void chk_n_alloc() // used by functions that add elements to a StrVec
-			{ if (size() == capacity()) reallocate(); }
-		// utilities used by the copy constructor, assignment operator, and destructor
-		std::pair<std::string*, std::string*> alloc_n_copy
-			(const std::string*, const std::string*);
-		void free(); // destroy the elements and free the space
-		void reallocate(); // get more space and copy the existing elements
-		std::string *elements; // pointer to the first element in the array
-		std::string *first_free; // pointer to the first free element in the array
-		std::string *cap; // pointer to one past the end of the array
-};
-
-// alloc must be defined in the StrVec implementation file
 std::allocator<std::string> StrVec::alloc;
+
+StrVec(std::initializer_list<std::string> lst): {
+	auto newdata = alloc_n_copy(lst.begin(), lst.end());
+	elements = newdata.first;
+	first_free = cap = newdata.second;
+}
 
 void StrVec::push_back(const std::string& s) {
 	chk_n_alloc(); // ensure that there is room for another element
@@ -88,4 +64,23 @@ void StrVec::reallocate() {
 	cap = elements + newcapacity;
 }
 
-#endif
+void StrVec::reserve(const std::size_t new_cap) {
+	if (new_cap > cap) {
+		auto data = alloc.allocate(new_cap);
+		auto last = uninitialized_copy(begin(), end(), data);
+		free();
+		elements = data;
+		first_free = last;
+		cap = elements + new_cap;
+	}
+}
+
+void StrVec::resize(const std::size_t count, const std::string &s) {
+	if (count > size()) {
+		for (auto i = size(); i != count; ++i)
+			push_back(s);
+	} else if (n < size()) {
+		for (auto i = size() - n; i != 0; --i)
+			alloc.destroy(--first_free);
+	}
+}
