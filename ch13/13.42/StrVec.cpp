@@ -32,6 +32,10 @@ void StrVec::free() {
 	}
 }
 
+StrVec::~StrVec() {
+	free();
+}
+
 StrVec::StrVec(const StrVec &s) {
 	// call alloc_n_copy to allocate exactly as many elements as in s
 	auto newdata = alloc_n_copy(s.begin(), s.end());

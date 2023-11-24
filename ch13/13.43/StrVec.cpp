@@ -25,9 +25,7 @@ std::pair<std::string*, std::string*> StrVec::alloc_n_copy(const std::string *b,
 void StrVec::free() {
 	// may not pass deallocate a 0 pointer; if elements is 0, there's no work to do
 	if (elements) {
-		// destroy the old elements in reverse order
-		for (auto p = first_free; p != elements;)
-			alloc.destroy(--p);
+		for_each(elements, first_free, [](std::string &s){ alloc.destroy(&s); });
 		alloc.deallocate(elements, cap - elements);
 	}
 }

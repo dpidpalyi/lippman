@@ -4,6 +4,7 @@
 #include <string>
 #include <memory>
 #include <cstdlib>
+#include <algorithm>
 
 class StrVec {
 	public:
