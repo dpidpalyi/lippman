@@ -4,9 +4,9 @@
 class HasPtr {
 public:
   HasPtr(const std::string &s = std::string())
-      : ps(new std::string(s)), i(0) {}
+      : ps(new std::string(s)), i(0) { std::cout << "Default" << std::endl; }
   HasPtr(const HasPtr &ori)
-      : ps(new std::string(*ori.ps)), i(ori.i) {}
+      : ps(new std::string(*ori.ps)), i(ori.i) { std::cout << "Copy constr" << std::endl; }
 
   HasPtr &operator=(const HasPtr &rhs);
 
@@ -27,7 +27,8 @@ HasPtr &HasPtr::operator=(const HasPtr &rhs) {
 }
 
 int main() {
-  HasPtr hp1 = std::string("World");
+  //HasPtr hp1 = std::string("World");
+  HasPtr hp1(std::string("World"));
   HasPtr hp2 = hp1;
   HasPtr hp3;
   hp3 = hp1;

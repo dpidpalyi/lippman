@@ -16,4 +16,4 @@ HasPtr& HasPtr::operator=(const HasPtr &rhs) {
 	ps = newp;
 	i = rhs.i;
 	return *this;
-
+}
