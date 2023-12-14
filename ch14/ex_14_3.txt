@@ -1,0 +1,4 @@
+(a) "cobble" == "stone"  // bool operator==(const char*, const char*);
+(b) svec1[0] == svec2[0] // bool operator==(const std::string&, const std::string&);
+(c) svec1 == svec2 	 // bool operator==(const std::vector<std::string>&, const std::vector<std::string>&);
+(d) svec1[0] == "stone"  // bool operator==(const std::string&, const std::string&);

@@ -1,0 +1,8 @@
+(a) %  - symmetric, should be nonmember 
+(b) %= - change state of the objects, ought to be class member
+(c) ++ - change state of the objects, should be class member
+(d) -> - must be class member
+(e) << - should be nonmember
+(f) && - symmetric, should be nonmember
+(g) == - symmetric, should be nonmember
+(h) () - must be class member

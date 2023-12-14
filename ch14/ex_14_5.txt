@@ -1,0 +1,6 @@
+(a) Book:	==, !=, <
+(b) Date:	==, !=, <, +, -, %, ++, --
+(c) Employee:	==, !=, 
+(d) Vehicle:	==, !=, <
+(e) Object:	==, !=, <
+(f) Tree:	==, !=, <
