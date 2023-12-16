@@ -1,0 +1,2 @@
+(a) 0-201-99999-9 10 24.95 // all will be ok!
+(b) 10 24.95 0-210-99999-9 // the data cannot be read properly, but the state of the stream is fine at the end. 24 to units_sold and .95 to price will be read.
