@@ -11,6 +11,8 @@ class Vehicle {
 		}
 		Vehicle(const Vehicle&) = default;
 		Vehicle &operator=(const Vehicle&) = default;
+
+		explicit operator bool() const { return distance; }
 	private:
 		std::string manfctr;
 		std::string model;
