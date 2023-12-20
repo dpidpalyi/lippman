@@ -1,0 +1,2 @@
+protected differ from private, that derived class can have access to those base class members(protected). 
+A protected member in base class can be access by its derived class, while a private member cannot.
