@@ -1,0 +1,5 @@
+Yes it is, because out function can override base class virtual function and.
+In conclusion, the best practice in my own view is:
+    only use virtual in declaration of the first virtual function in base class;
+    always use override to specify override virtual function in derived class, unless final is also specified.
+
